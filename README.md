@@ -20,16 +20,8 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
 ### Usage
 
-    docker run -i -t dockerfile/mongodb bash
-
-#### Run `mongod`
-
-    docker run dockerfile/redis mongod
-
-(Alternatively, use [dockerfile/mongod](https://github.com/dockerfile/mongod) executable image.)
+    docker run -p 27017:27017 -p 28017:28017 dockerfile/mongodb
 
 #### Run `mongo`
 
-    docker run dockerfile/redis mongo
-
-(Alternatively, use [dockerfile/mongo](https://github.com/dockerfile/mongo) executable image.)
+    docker run -entrypoint="mongo" dockerfile/mongodb
