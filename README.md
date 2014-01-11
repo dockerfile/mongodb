@@ -22,7 +22,11 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
 #### Run `mongod`
 
-    docker run -p 27017:27017 -p 28017:28017 dockerfile/mongodb
+    docker run -p 27017:27017 dockerfile/mongodb
+
+#### Run `mongod` w/ HTTP support (requires firewall on port 28017)
+
+    docker run -p 27017:27017 -p 28017:28017 dockerfile/mongodb --rest
 
 #### Run `mongo`
 
