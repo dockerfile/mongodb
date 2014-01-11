@@ -20,8 +20,10 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
 ### Usage
 
+#### Run `mongod`
+
     docker run -p 27017:27017 -p 28017:28017 dockerfile/mongodb
 
 #### Run `mongo`
 
-    docker run -entrypoint="mongo" dockerfile/mongodb
+    docker run -i -rm -t -entrypoint="mongo" dockerfile/mongodb
