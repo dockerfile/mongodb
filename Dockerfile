@@ -4,4 +4,5 @@
 # https://github.com/dockerfile/mongodb
 #
 
-FROM ubuntu:12.10
+# Pull base image.
+FROM dockerfile/ubuntu
