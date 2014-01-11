@@ -21,3 +21,15 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 ### Usage
 
     docker run dockerfile/mongodb
+
+#### Run `mongod`
+
+    docker run -i -t dockerfile/redis mongod
+
+(Alternatively, use [dockerfile/mongod](https://github.com/dockerfile/mongod) executable image.)
+
+#### Run `mongo`
+
+    docker run -i -t dockerfile/redis mongo
+
+(Alternatively, use [dockerfile/mongo](https://github.com/dockerfile/mongo) executable image.)
