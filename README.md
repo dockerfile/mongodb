@@ -1,9 +1,23 @@
 ## MongoDB Dockerfile
 
-This repository contains Dockerfile of [MongoDB](http://www.mongodb.org/) for the [Trusted MongoDB Build](https://index.docker.io/u/dockerfile/mongodb/) published to the [Docker Registry](https://index.docker.io/).
 
-### How To Use
+This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) for [Docker](https://www.docker.io/)'s [trusted build](https://index.docker.io/u/dockerfile/mongodb/) published to the public [Docker Registry](https://index.docker.io/).
+
+
+### Dependencies
+
+* [dockerfile/ubuntu](https://github.com/dockerfile/ubuntu)
+
+
+### Installation
 
 1. Install [Docker](https://www.docker.io/).
-2. Pull trusted build from the public Docker registry: `docker pull dockerfile/mongodb`
-3. Run downloaded image: `docker run dockerfile/mongodb`
+
+2. Download [trusted build](https://index.docker.io/u/dockerfile/mongodb/) from public [Docker Registry](https://index.docker.io/): `docker pull dockerfile/mongodb`
+
+   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/mongodb" .`)
+
+
+### Usage
+
+    docker run dockerfile/mongodb
