@@ -15,7 +15,7 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
 2. Download [trusted build](https://index.docker.io/u/dockerfile/mongodb/) from public [Docker Registry](https://index.docker.io/): `docker pull dockerfile/mongodb`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/mongodb" .`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/mongodb" github.com/dockerfile/mongodb`)
 
 
 ### Usage
