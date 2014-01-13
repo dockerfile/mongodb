@@ -6,7 +6,7 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
 ### Dependencies
 
-* [dockerfile/ubuntu](https://github.com/dockerfile/ubuntu)
+* [dockerfile/ubuntu](http://dockerfile.github.io/#/ubuntu)
 
 
 ### Installation
