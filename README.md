@@ -30,4 +30,14 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
 #### Run `mongo`
 
-    docker run -i -rm -t -entrypoint="mongo" dockerfile/mongodb
+    docker run -i -rm -t --entrypoint="mongo" dockerfile/mongodb
+
+#### Attach persistent/shared directories
+
+  1. Create a mountable data directory `<data-dir>` on the host.
+
+  2. Create MongoDB database directory at `<data-dir>/db`.
+
+  3. Start a container by mounting data directory:
+
+    docker run -d -p 27017:27017 -v <data-dir>:/data dockerfile/mongodb
