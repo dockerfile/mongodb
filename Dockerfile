@@ -17,11 +17,17 @@ RUN apt-get update && apt-get install -y mongodb-org
 # Create default MongoDB data directory.
 RUN mkdir -p /data/db
 
+# Define mountable directories.
+VOLUME ["/data"]
+
+# Define working directory.
+WORKDIR "/data"
+
+# Define default command.
+ENTRYPOINT ["mongod"]
+
 # Expose ports.
 #   - 27017: process
 #   - 28017: http
 EXPOSE 27017
 EXPOSE 28017
-
-# Define an entry point.
-ENTRYPOINT ["mongod"]
