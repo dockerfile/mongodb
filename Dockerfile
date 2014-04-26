@@ -21,7 +21,7 @@ RUN mkdir -p /data/db
 VOLUME ["/data"]
 
 # Define working directory.
-WORKDIR "/data"
+WORKDIR /data
 
 # Define default command.
 ENTRYPOINT ["mongod"]
