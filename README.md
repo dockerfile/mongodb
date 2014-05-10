@@ -30,7 +30,7 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
 #### Run `mongo`
 
-    docker run -i -rm -t --entrypoint="mongo" dockerfile/mongodb
+    docker run -it --rm --entrypoint="mongo" dockerfile/mongodb
 
 #### Attach persistent/shared directories
 
