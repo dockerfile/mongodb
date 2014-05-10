@@ -24,7 +24,7 @@ VOLUME ["/data"]
 WORKDIR /data
 
 # Define default command.
-ENTRYPOINT ["mongod"]
+CMD ["mongod"]
 
 # Expose ports.
 #   - 27017: process
