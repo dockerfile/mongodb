@@ -24,6 +24,10 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
     docker run -d -p 27017:27017 --name mongodb dockerfile/mongodb
 
+#### Run `mongod` w/ persistent/shared directory
+
+    docker run -d -p 27017:27017 -v <data-dir>:/data --name mongodb dockerfile/mongodb
+
 #### Run `mongod` w/ HTTP support (requires firewall on port 28017)
 
     docker run -d -p 27017:27017 -p 28017:28017 --name mongodb dockerfile/mongodb mongod --rest --httpinterface
@@ -31,13 +35,3 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 #### Run `mongo`
 
     docker run -it --rm --link mongodb:mongodb dockerfile/mongodb bash -c 'mongo --host $MONGODB_PORT_27017_TCP_ADDR'
-
-#### Attach persistent/shared directories
-
-  1. Create a mountable data directory `<data-dir>` on the host.
-
-  2. Create MongoDB database directory at `<data-dir>/db`.
-
-  3. Start a container by mounting data directory:
-
-    docker run -d -p 27017:27017 -v <data-dir>:/data dockerfile/mongodb
