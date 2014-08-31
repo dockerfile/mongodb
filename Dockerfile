@@ -13,11 +13,10 @@ RUN \
   echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > /etc/apt/sources.list.d/mongodb.list && \
   apt-get update && \
   apt-get install -y mongodb-org && \
-  rm -rf /var/lib/apt/lists/* && \
-  mkdir -p /data/db
+  rm -rf /var/lib/apt/lists/*
 
 # Define mountable directories.
-VOLUME ["/data"]
+VOLUME ["/data/db"]
 
 # Define working directory.
 WORKDIR /data
