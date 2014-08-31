@@ -28,18 +28,18 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
     docker run -d -p 27017:27017 -v <db-dir>:/data/db --name mongodb dockerfile/mongodb
 
-#### Run `mongod` w/ HTTP support (requires firewall on port 28017)
+#### Run `mongod` w/ HTTP support
 
     docker run -d -p 27017:27017 -p 28017:28017 --name mongodb dockerfile/mongodb mongod --rest --httpinterface
 
 #### Run `mongo`
-    
-    docker run -it --rm --link mongodb:mongodb dockerfile/mongodb bash -c 'mongo --host $MONGODB_PORT_27017_TCP_ADDR'
+
+    docker run -it --rm --link mongodb:mongodb dockerfile/mongodb bash -c 'mongo --host mongodb'
 
 ##### Usage with VirtualBox (boot2docker-vm)
 
 _You will need to set up nat port forwarding with:_  
 
-    VBoxManage modifyvm "boot2docker-vm" --natpf1 "guestmongodb,tcp,127.0.0.1,27017,,27017"  
-    
-This will allow you to connect to your mongo container with the standard 'mongo' commands  
+    VBoxManage modifyvm "boot2docker-vm" --natpf1 "guestmongodb,tcp,127.0.0.1,27017,,27017"
+
+This will allow you to connect to your mongo container with the standard `mongo` commands.
