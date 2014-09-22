@@ -32,6 +32,10 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
     docker run -d -p 27017:27017 -p 28017:28017 --name mongodb dockerfile/mongodb mongod --rest --httpinterface
 
+#### Run `mongod` w/ Smaller default file size
+
+    docker run -d -p 27017:27017 --name mongodb dockerfile/mongodb mongod --smallfiles
+
 #### Run `mongo`
 
     docker run -it --rm --link mongodb:mongodb dockerfile/mongodb bash -c 'mongo --host mongodb'
