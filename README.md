@@ -13,32 +13,32 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Download [automated build](https://registry.hub.docker.com/u/dockerfile/mongodb/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull dockerfile/mongodb`
+2. Download [automated build](https://registry.hub.docker.com/u/dockerfile/mongodb/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull library/mongo`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/mongodb" github.com/dockerfile/mongodb`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="library/mongo" github.com/dockerfile/mongodb`)
 
 
 ### Usage
 
 #### Run `mongod`
 
-    docker run -d -p 27017:27017 --name mongodb dockerfile/mongodb
+    docker run -d -p 27017:27017 --name mongodb library/mongo
 
 #### Run `mongod` w/ persistent/shared directory
 
-    docker run -d -p 27017:27017 -v <db-dir>:/data/db --name mongodb dockerfile/mongodb
+    docker run -d -p 27017:27017 -v <db-dir>:/data/db --name mongodb library/mongo
 
 #### Run `mongod` w/ HTTP support
 
-    docker run -d -p 27017:27017 -p 28017:28017 --name mongodb dockerfile/mongodb mongod --rest --httpinterface
+    docker run -d -p 27017:27017 -p 28017:28017 --name mongodb library/mongo mongod --rest --httpinterface
 
 #### Run `mongod` w/ Smaller default file size
 
-    docker run -d -p 27017:27017 --name mongodb dockerfile/mongodb mongod --smallfiles
+    docker run -d -p 27017:27017 --name mongodb library/mongo mongod --smallfiles
 
 #### Run `mongo`
 
-    docker run -it --rm --link mongodb:mongodb dockerfile/mongodb bash -c 'mongo --host mongodb'
+    docker run -it --rm --link mongodb:mongodb library/mongo bash -c 'mongo --host mongodb'
 
 ##### Usage with VirtualBox (boot2docker-vm)
 
