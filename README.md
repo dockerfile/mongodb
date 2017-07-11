@@ -1,7 +1,7 @@
 ## MongoDB Dockerfile
 
 
-This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/dockerfile/mongodb/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains a **Dockerfile** of [MongoDB](http://www.mongodb.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/dockerfile/mongodb/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
 
 ### Base Docker Image
@@ -13,7 +13,7 @@ This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) fo
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Download [automated build](https://registry.hub.docker.com/u/dockerfile/mongodb/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull dockerfile/mongodb`
+2. Download the [automated build](https://registry.hub.docker.com/u/dockerfile/mongodb/) from the public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull dockerfile/mongodb`
 
    (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/mongodb" github.com/dockerfile/mongodb`)
 
